@@ -12,7 +12,7 @@ services:
       # TODO: renable sharing logs
       # - ./nginx-log:/var/log/nginx
     ports:
-      - 8080:80
+      - 5050:80
     networks:
       - dps-net
 
@@ -103,8 +103,8 @@ services:
     build:
       context: ./src
       args:
-        - MVN_PROFILES=dpsnotificationservice
-        - DPS_SERVICE_NAME=dpsnotificationservice
+        - MVN_PROFILES=dps-notifications-ervice
+        - DPS_SERVICE_NAME=dps-notification-service
     environment: 
       - RABBITMQ_HOST=rabbitmq
     ports:

@@ -78,7 +78,7 @@
                 <module>paymentservice</module>
                 <module>dpsvalidationservice</module>
                 <module>figvalidationservice</module>
-                <module>dpsnotificationservice</module>
+                <module>dps-notification-service</module>
                 <module>crrp-notification-worker</module>
             </modules>
         </profile>
@@ -101,10 +101,10 @@
             </modules>
         </profile>
         <profile>
-            <id>dpsnotificationservice</id>
+            <id>dps-notification-service</id>
             <modules>
                 <module>libs/dpsnotification</module>
-                <module>dpsnotificationservice</module>
+                <module>dps-notification-service</module>
             </modules>
         </profile>
         <profile>
