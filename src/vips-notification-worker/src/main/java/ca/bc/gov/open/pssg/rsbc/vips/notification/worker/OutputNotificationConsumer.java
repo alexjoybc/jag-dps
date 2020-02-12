@@ -61,10 +61,20 @@ public class OutputNotificationConsumer {
         logger.info("received message for {}", message.getBusinessAreaCd());
         byte[] image = getImage(message.getFileId());
         logger.info("successfully downloaded file [{}]", buildFileName(message.getFileId(), IMAGE_EXTENSION));
+
+
+
+
+        // after ords call, if success archive.
+
     }
 
     private String buildFileName(String fileId, String extension) {
-        return MessageFormat.format("{0}/release/{1}.{2}",sftpProperties.getRemoteLocation(), fileId, extension);
+        return MessageFormat.format("{0}/{1}/{2}.{3}",sftpProperties.getRemoteLocation(), Keys.SFTP_RELEASE_DIR, fileId, extension);
+    }
+
+    private String buildArchiveFileName(String fileId, String extension) {
+        return MessageFormat.format("{0}/{1}/{2}.{3}",sftpProperties.getRemoteLocation(), Keys.SFTP_ARCHIVE_DIR, fileId, extension);
     }
 
     private String getMetadata(String fileId) {
