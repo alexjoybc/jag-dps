@@ -68,8 +68,8 @@ services:
       context: ./src
       args:
         - spring_profiles_active=cloud
-        - MVN_PROFILES=figvalidationservice,splunk
-        - DPS_SERVICE_NAME=figvalidationservice
+        - MVN_PROFILES=figaro-validation-service,splunk
+        - DPS_SERVICE_NAME=figaro-validation-service
     environment: 
       - SWAGGER_UI_ENABLED=true
       - FIGCR_BASE_PATH=$FIGCR_BASE_PATH
