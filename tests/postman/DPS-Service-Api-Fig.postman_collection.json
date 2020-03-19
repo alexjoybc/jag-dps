@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7ba03519-98f5-4114-b64d-449e6bb5074e",
+		"_postman_id": "7c9f428b-a811-4dc6-a0d0-1c4261efb529",
 		"name": "DPS-Service-Api-Fig",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -59,7 +59,7 @@
 							"script": {
 								"id": "46f2fa17-349f-4b8e-a675-470de403812d",
 								"exec": [
-									"pm.environment.set(\"baseUrl\", 'http://localhost:5050');"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -369,7 +369,7 @@
 							"script": {
 								"id": "4fa11171-583e-44f8-9d81-8eaa6196b7c2",
 								"exec": [
-									"pm.environment.set(\"baseUrl\", 'http://localhost:8082');"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -480,7 +480,7 @@
 							"script": {
 								"id": "ebc0b7a4-5d0c-4637-8f4d-deefb6d1bb40",
 								"exec": [
-									"pm.environment.set(\"baseUrl\", 'http://localhost:8082');"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -604,7 +604,7 @@
 							"script": {
 								"id": "ed629609-32f0-4797-93cc-b406c7cbd0df",
 								"exec": [
-									"pm.environment.set(\"baseUrl\", 'http://localhost:8082');"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -719,7 +719,7 @@
 							"script": {
 								"id": "d7ff7a56-a66d-4801-b025-a1c85f9fb755",
 								"exec": [
-									"pm.environment.set(\"baseUrl\", 'http://localhost:8082');"
+									""
 								],
 								"type": "text/javascript"
 							}
