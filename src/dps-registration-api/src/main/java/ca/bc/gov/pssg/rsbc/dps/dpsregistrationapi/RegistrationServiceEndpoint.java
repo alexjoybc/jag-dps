@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.text.MessageFormat;
 
+
 @Service
 public class RegistrationServiceEndpoint implements DpsDocumentStatusRegWSPortType {
 

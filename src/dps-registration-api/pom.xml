@@ -21,51 +21,56 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
+			<version>3.3.2</version>
+			<exclusions><!-- CXF uses java.util.logging by default -->
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
+			<groupId>org.webjars</groupId>
+			<artifactId>swagger-ui</artifactId>
+			<version>3.23.4</version>
 		</dependency>
-
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web-services</artifactId>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-service-description-openapi-v3</artifactId>
+			<version>3.3.2</version>
 		</dependency>
 
 		<dependency>
 			<groupId>wsdl4j</groupId>
 			<artifactId>wsdl4j</artifactId>
+			<version>1.6.3</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+			<version>3.3.2</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-features-logging</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>ca.bc.gov.open.pssg.rsbc</groupId>
+            <artifactId>otssoa-ords-client</artifactId>
+            <version>0.4.0-SNAPSHOT</version>
+        </dependency>
 
-		<dependency>
-			<groupId>ca.bc.gov.open.pssg.rsbc</groupId>
-			<artifactId>otssoa-ords-client</artifactId>
-			<version>0.4.0-SNAPSHOT</version>
-		</dependency>
+        <dependency>
+            <groupId>ca.bc.gov.open.pssg.rsbc</groupId>
+            <artifactId>dps-monitoring</artifactId>
+            <version>0.4.0-SNAPSHOT</version>
+        </dependency>
 
-		<dependency>
-			<groupId>ca.bc.gov.open.pssg.rsbc</groupId>
-			<artifactId>dps-monitoring</artifactId>
-			<version>0.4.0-SNAPSHOT</version>
-		</dependency>
 
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
@@ -82,22 +87,13 @@
 			<artifactId>logback-access</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>net.rakugakibox.spring.boot</groupId>
-			<artifactId>logback-access-spring-boot-starter</artifactId>
-		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.junit.vintage</groupId>
-					<artifactId>junit-vintage-engine</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
+
 	</dependencies>
 
 	<dependencyManagement>
